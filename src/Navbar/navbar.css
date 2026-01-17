@@ -1,0 +1,81 @@
+.navbar {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.navbar_logo img {
+    width: 97px;
+}
+
+/* Make navbar_links the positioning context for underline */
+.navbar_links {
+    position: relative;
+}
+
+.navbar_links ol {
+    display: flex;
+    gap: 4rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* underline will be positioned relative to this */
+}
+
+.navbar_links li {
+    list-style: none;
+    margin-bottom: 3px;
+}
+
+.navbar_links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 27px;
+    position: relative;
+}
+
+/* underline element controlled by React */
+.underline {
+    position: absolute;
+    top: 100%;
+    /* sits directly below the links */
+    left: 0;
+    height: 4px;
+    background-color: #47A3EF;
+    transition: transform 0.3s ease, width 0.3s ease;
+    width: 0;
+    border-radius: 2px;
+    /* start collapsed */
+    transform: translateX(0);
+}
+
+.navbar_search {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar_search img {
+    width: 25px;
+}
+
+.navbar_search button {
+    background-color: white;
+    border-radius: 7px;
+    border: none;
+    color: #08283D;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar_search button img {
+    width: 13px;
+    margin-left: 10px;
+}

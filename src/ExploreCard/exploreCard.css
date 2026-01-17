@@ -1,0 +1,72 @@
+.exploreCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* NEW: This flips the order of the image and text */
+.exploreCard.reversed {
+    flex-direction: row-reverse;
+}
+
+.exploreCard_img img {
+    height: 475px;
+}
+
+.horizontal-line {
+    width: 76px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #47A3EF;
+}
+
+.exploreCard_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 5rem;
+    align-items: flex-start;
+}
+
+.exploreCard.reversed .exploreCard_content {
+    padding-left: 0;
+    padding-right: 5rem;
+}
+
+.exploreCard_content h4 {
+    font-size: 25px;
+    color: #47A3EF;
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}
+
+.exploreCard_content h1 {
+    font-size: 60px;
+    color: #FFFFFF;
+}
+
+.exploreCard_content h2 {
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 40px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.exploreCard_content p {
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.exploreCard_content button {
+    color: #47A3EF;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.exploreCard_content button img {
+    margin-left: 10px;
+}
+

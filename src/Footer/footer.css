@@ -1,0 +1,46 @@
+.footer_content {
+    padding: 1rem 10rem;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+    position: relative;
+}
+
+.footer_logo img {
+    width: 122px;
+    margin-bottom: 1rem;
+}
+
+.footer_logo p {
+    font-size: 16px;
+    color: rgb(255, 255, 255, 0.6);
+}
+
+.footer_links {
+    display: flex;
+    gap: 10rem;
+}
+
+.link_group {
+    display: flex;
+    flex-direction: column;
+}
+.link_group h4{
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.link_group a {
+    margin-bottom: 0.75rem;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.8);
+}
+
+.horizontal_line {
+    width: 100%;
+    height: 1rem;
+    background: linear-gradient(to right, #17578C, #FFFFFF);
+}
