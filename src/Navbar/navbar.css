@@ -1,81 +1,175 @@
 .navbar {
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Ubuntu", sans-serif;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .navbar_logo img {
-    width: 97px;
+  width: 97px;
 }
 
-/* Make navbar_links the positioning context for underline */
 .navbar_links {
-    position: relative;
+  position: relative;
 }
 
 .navbar_links ol {
-    display: flex;
-    gap: 4rem;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    /* underline will be positioned relative to this */
+  display: flex;
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 .navbar_links li {
-    list-style: none;
-    margin-bottom: 3px;
+  list-style: none;
+  margin-bottom: 3px;
 }
 
 .navbar_links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 27px;
-    position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 27px;
+  position: relative;
 }
 
-/* underline element controlled by React */
 .underline {
-    position: absolute;
-    top: 100%;
-    /* sits directly below the links */
-    left: 0;
-    height: 4px;
-    background-color: #47A3EF;
-    transition: transform 0.3s ease, width 0.3s ease;
-    width: 0;
-    border-radius: 2px;
-    /* start collapsed */
-    transform: translateX(0);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 4px;
+  background-color: #47a3ef;
+  transition:
+    transform 0.3s ease,
+    width 0.3s ease;
+  width: 0;
+  border-radius: 2px;
+  transform: translateX(0);
 }
 
 .navbar_search {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  cursor: pointer;
 }
 
 .navbar_search img {
-    width: 25px;
+  width: 25px;
 }
 
-.navbar_search button {
-    background-color: white;
-    border-radius: 7px;
-    border: none;
-    color: #08283D;
-    padding: 0.5rem 1rem;
-    font-size: 18px;
-    font-family: "Ubuntu", sans-serif;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+.language {
+  background-color: white;
+  border-radius: 7px;
+  border: none;
+  color: #08283d;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .navbar_search button img {
-    width: 13px;
-    margin-left: 10px;
+  width: 13px;
+  margin-left: 10px;
+}
+
+.res_navbar_links {
+  display: none;
+}
+
+.nav-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__navbar-smallscreen_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #08283d;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.app__navbar-smallscreen_overlay .overlay__close {
+  color: #fff;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.app__navbar-smallscreen_overlay ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.app__navbar-smallscreen_overlay li a {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.app__navbar-smallscreen_overlay li a:hover,
+.app__navbar-smallscreen_overlay li a.active {
+  color: #47a3ef;
+}
+
+.slide-bottom {
+  animation: slide-bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .navbar_logo img {
+    width: 50px;
+  }
+
+  .navbar_links {
+    display: none;
+  }
+
+  .res_navbar_links {
+    display: block;
+  }
+
+   .res_navbar_links .language {
+    margin-top: 2rem;
+    display: flex;
+    gap: 10px;
+  }
+
+  .navbar_search button {
+    display: none;
+  }
 }

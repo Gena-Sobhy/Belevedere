@@ -1,7 +1,7 @@
 import React from 'react'
 import './about.css'
 import ExploreCard from "../ExploreCard/ExploreCard"
-import CoverImage from "../assets/cover image.png"
+import CoverImage from "../assets/cover image.webp"
 
 const About = () => {
   return (

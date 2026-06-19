@@ -1,138 +1,286 @@
 .hero {
-    background-image: url(../assets/hero.png);
-    height: 1245px;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
+  background-image: url(../assets/hero.webp);
+  height: 235vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero_content_wrapper {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .hero_title {
-    color: white;
+  color: white;
 }
 
 .hero_title h1 {
-    font-size: 70px;
-    margin-bottom: 1rem;
+  font-size: 70px;
+  margin-bottom: 1rem;
 }
 
 .hero_title span {
-    font-size: 100px;
+  font-size: 100px;
 }
 
 .play_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
 }
 
 .play_button button {
-    background: none;
-    border: none;
-    cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .carousel_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 50px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 50px;
+  position: relative;
 }
 
 .hero_slides {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .slide_card {
-    flex: 0 0 auto;
-    border-radius: 20px;
-    transition: all 0.5s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    margin: 0.5rem;
-    cursor: pointer;
+  flex: 0 0 auto;
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem;
+  cursor: pointer;
 }
 
 .slide_card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    transition: filter 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: filter 0.3s ease;
 }
 
 .slide_info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+  pointer-events: none;
 }
 
 .slide_info h3 {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
 .slide_info p {
-    font-size: 0.7rem;
-    color: #ccc;
+  font-size: 0.7rem;
+  color: #ccc;
 }
 
 .slide_card:hover .slide_info {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .slide_card:hover img {
-    filter: brightness(50%);
-    border: 2px solid white;
+  filter: brightness(50%);
+  border: 2px solid white;
 }
 
 .level-0 {
-    width: 218px;
-    height: 273px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 218px;
+  height: 273px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .level-1 {
-    width: 196px;
-    height: 246px;
+  width: 196px;
+  height: 246px;
 }
 
 .level-2 {
-    width: 174px;
-    height: 218px;
+  width: 174px;
+  height: 218px;
 }
 
 .nav_btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 5rem;
-    cursor: pointer;
-    transition: opacity 0.3s;
-    margin: 3rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 5rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  margin: 3rem;
 }
 
 .nav_btn:hover {
-    opacity: 0.6;
+  opacity: 0.6;
+}
+
+.carousel_container {
+  touch-action: pan-y;
+}
+
+@media screen and (max-width: 1280px) {
+  .hero {
+    height: 170vh;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .hero {
+    height: 120vh;
+  }
+
+  .hero_title h1 {
+    font-size: 55px;
+    margin-bottom: 1rem;
+  }
+
+  .hero_title span {
+    font-size: 75px;
+  }
+
+  .play_button button img {
+    width: 120px;
+  }
+
+  .hero_slides {
+    gap: 0.5rem;
+  }
+
+  .level-0 {
+    width: 158px;
+    height: 223px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .level-1 {
+    width: 146px;
+    height: 196px;
+  }
+
+  .level-2 {
+    width: 124px;
+    height: 168px;
+  }
+
+  .slide_card {
+    margin: 0;
+  }
+
+  .nav_btn {
+    margin: 1.5rem;
+
+    img {
+      width: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .hero {
+    height: 110vh;
+  }
+
+  .hero_title h1 {
+    font-size: 45px;
+    margin-bottom: 1rem;
+  }
+
+  .hero_title span {
+    font-size: 60px;
+  }
+
+  .play_button button img {
+    width: 90px;
+  }
+
+  .slide_info {
+    display: none;
+  }
+
+  .level-0 {
+    width: 128px;
+    height: 183px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .level-1 {
+    width: 116px;
+    height: 156px;
+  }
+
+  .level-2 {
+    width: 94px;
+    height: 128px;
+  }
+
+  .nav_btn {
+    margin: 1rem;
+
+    img {
+      width: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero {
+    height: 90vh;
+  }
+
+  .hero_title h1 {
+    font-size: 30px;
+    margin-bottom: 1rem;
+  }
+
+  .hero_title span {
+    font-size: 40px;
+  }
+
+  .play_button button img {
+    width: 60px;
+  }
+
+  .level-0 {
+    width: 108px;
+    height: 150px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .level-1 {
+    width: 96px;
+    height: 126px;
+  }
+
+  .level-2 {
+    display: none;
+  }
+
+  .nav_btn {
+    display: none;
+  }
 }

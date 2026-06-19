@@ -1,6 +1,6 @@
 // img, city, title, location, about
-import TagMahal from "./Taj Mahal.png";
-import SaltvigaHouse from "./Saltviga House.png";
+import TagMahal from "./Taj Mahal.webp";
+import SaltvigaHouse from "./Saltviga House.webp";
 
 
 const exploreAssets = [

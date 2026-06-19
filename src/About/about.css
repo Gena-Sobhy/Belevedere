@@ -1,5 +1,18 @@
 .about {
-    padding: 3rem;
-    position: relative;
-    height: 600px;
+  padding: 3rem;
+  position: relative;
+  height: 600px;
 }
+
+@media screen and (max-width: 1080px) {
+  .about {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .about {
+    padding: 0rem 1.5rem;
+  }
+}
+

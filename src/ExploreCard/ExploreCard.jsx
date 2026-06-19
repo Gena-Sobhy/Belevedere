@@ -4,7 +4,6 @@ import ExploreBtn from '../assets/explore-btn.svg';
 
 const ExploreCard = ({ img, city, title, location, about, isReversed }) => {
   return (
-    /* This adds the 'reversed' class if isReversed is true */
     <div className={`exploreCard ${isReversed ? 'reversed' : ''}`}>
       <div className="exploreCard-content">
         

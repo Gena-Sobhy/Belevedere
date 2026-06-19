@@ -1,29 +1,113 @@
 .booking {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .booking_content {
-    padding: 3rem 4rem;
-    margin: 2rem;
-    background-color: #17578C;
-    color: white;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 25px;
-    width: 1169px;
+  padding: 3rem 4rem;
+  margin: 2rem;
+  background-color: #17578c;
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+  box-sizing: border-box;
 }
 
-.booking button{
-    border: white 3px solid;
-    color: white;
-    font-size: 25px;
-    cursor: pointer;
+.booking_content h1 {
+  font-size: 42px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.booking button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: transparent;
+  border: white 3px solid;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.booking button:hover {
+  background-color: white;
+  color: #17578c;
 }
 
 .booking img {
-    width: 30px;
+  width: 30px;
+  height: auto;
+}
+
+@media screen and (max-width: 950px) {
+  .booking_content {
+    flex-direction: column;
+    padding: 2.5rem 3rem;
+  }
+
+  .booking_content h1 {
+    font-size: 34px;
+  }
+
+  .booking button {
+    font-size: 18px;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .booking_content {
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: 1.5rem;
+  }
+
+  .booking_content h1 {
+    font-size: 28px;
+  }
+
+  .booking button {
+    font-size: 16px;
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .booking_content {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+    border-radius: 20px;
+  }
+
+  .booking_content h1 {
+    font-size: 24px;
+  }
+
+  .booking button {
+    font-size: 14px;
+    padding: 0.6rem 1rem;
+    border: white 2px solid;
+  }
+
+  .booking img {
+    width: 20px;
+  }
 }

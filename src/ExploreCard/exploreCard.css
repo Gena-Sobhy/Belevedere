@@ -1,72 +1,204 @@
 .exploreCard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 2rem;
+  width: 100%;
 }
 
-/* NEW: This flips the order of the image and text */
 .exploreCard.reversed {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.exploreCard_img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .exploreCard_img img {
-    height: 475px;
+  width: 100%;
+  max-width: 450px;
+  height: 475px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .horizontal-line {
-    width: 76px;
-    height: 3px;
-    border-radius: 5px;
-    background-color: #47A3EF;
+  width: 76px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #47a3ef;
 }
 
 .exploreCard_content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding-left: 5rem;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 5rem;
+  align-items: flex-start;
+  flex: 2;
 }
 
 .exploreCard.reversed .exploreCard_content {
-    padding-left: 0;
-    padding-right: 5rem;
+  padding-left: 0;
+  padding-right: 5rem;
 }
 
 .exploreCard_content h4 {
-    font-size: 25px;
-    color: #47A3EF;
-    display: flex;
-    align-items: end;
-    gap: 1rem;
+  font-size: 25px;
+  color: #47a3ef;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
 }
 
 .exploreCard_content h1 {
-    font-size: 60px;
-    color: #FFFFFF;
+  font-size: 60px;
+  color: #ffffff;
+  line-height: 1.2;
 }
 
 .exploreCard_content h2 {
-    color: rgb(255, 255, 255, 0.8);
-    font-size: 40px;
-    font-family: 'Great Vibes', cursive;
+  color: rgb(255, 255, 255, 0.8);
+  font-size: 40px;
+  font-family: "Great Vibes", cursive;
 }
 
 .exploreCard_content p {
-    font-size: 25px;
-    color: rgba(255, 255, 255, 0.6);
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
 }
 
 .exploreCard_content button {
-    color: #47A3EF;
-    font-size: 30px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  color: #47a3ef;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .exploreCard_content button img {
-    margin-left: 10px;
+  margin-left: 10px;
+  width: auto;
+  height: 1em;
 }
 
+@media screen and (max-width: 1080px) {
+  .exploreCard_img img {
+    height: 380px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .exploreCard_img {
+    flex: 1;
+  }
+
+  .exploreCard_content {
+    flex: 1;
+    padding-left: 2rem;
+    gap: 1rem;
+  }
+
+  .exploreCard.reversed .exploreCard_content {
+    padding-right: 2rem;
+    padding-left: 0;
+  }
+
+  .exploreCard_content h1 {
+    font-size: 42px;
+  }
+
+  .exploreCard_content h2 {
+    font-size: 32px;
+  }
+
+  .exploreCard_content h4 {
+    font-size: 20px;
+  }
+
+  .exploreCard_content p {
+    font-size: 18px;
+  }
+
+  .exploreCard_content button {
+    font-size: 22px;
+  }
+
+  .horizontal-line {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .exploreCard,
+  .exploreCard.reversed {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .exploreCard_img img {
+    height: 280px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .exploreCard_content,
+  .exploreCard.reversed .exploreCard_content {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .exploreCard_content h1 {
+    font-size: 32px;
+  }
+
+  .exploreCard_content h2 {
+    font-size: 26px;
+  }
+
+  .exploreCard_content h4 {
+    font-size: 18px;
+  }
+
+  .exploreCard_content p {
+    font-size: 16px;
+  }
+
+  .exploreCard_content button {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .exploreCard_img img {
+    height: 200px;
+  }
+
+  .exploreCard_content h1 {
+    font-size: 24px;
+  }
+
+  .exploreCard_content h2 {
+    font-size: 20px;
+  }
+
+  .exploreCard_content p {
+    font-size: 14px;
+  }
+
+  .exploreCard_content button {
+    font-size: 16px;
+  }
+
+  .horizontal-line {
+    width: 35px;
+  }
+}
