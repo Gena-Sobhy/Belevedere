@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Gena-Sobhy.github.io/Belevedere",
+  "homepage": "https://Gena-Sobhy.github.io/belevedere",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
